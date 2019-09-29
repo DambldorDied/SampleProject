@@ -10,5 +10,9 @@ public class TestMidArr {
         mas[1] = 4;
         double result = Massive.countMidAr(mas);
         assertEquals(3, result);
+        mas[0] = -10;
+        mas[1] = 10;
+        result = Massive.countMidAr(mas);
+        assertEquals(0, result);
     }
 }
