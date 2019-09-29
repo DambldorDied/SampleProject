@@ -21,7 +21,7 @@ public class Massive {
         }
         return count;
     }
-    public static int countMidAr(int[] arr) {
+    public static double countMidAr(int[] arr) {
         int sumArr = 0;
         for (int i = 0; i < arr.length; i++) {
             sumArr += arr[i];
