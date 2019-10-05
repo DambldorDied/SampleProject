@@ -1,6 +1,6 @@
 package fubyaka4;
 
-public class Teacher extends Human {
+public class Teacher extends Human implements Polite {
     private String subject;
 
     public Teacher(String name, String subject, int age) {
@@ -25,5 +25,9 @@ public class Teacher extends Human {
 
     public void teach(Student st) {
         st.sayHello();
+    }
+    @Override
+    public void goodBye() {
+        System.out.println("До свидания.");
     }
 }
