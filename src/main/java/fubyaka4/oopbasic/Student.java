@@ -1,4 +1,4 @@
-package fubyaka4;
+package fubyaka4.oopbasic;
 
 public class Student extends Human implements Polite {
     private int form;

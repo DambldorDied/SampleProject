@@ -1,4 +1,4 @@
-package fubyaka4;
+package fubyaka4.oopbasic;
 
 public class Human {
     protected String name;

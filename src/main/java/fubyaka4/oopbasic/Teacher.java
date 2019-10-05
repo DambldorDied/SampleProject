@@ -1,4 +1,4 @@
-package fubyaka4;
+package fubyaka4.oopbasic;
 
 public class Teacher extends Human implements Polite {
     private String subject;

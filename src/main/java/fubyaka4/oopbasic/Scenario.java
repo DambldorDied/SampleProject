@@ -1,4 +1,4 @@
-package fubyaka4;
+package fubyaka4.oopbasic;
 
 public class Scenario {
     public static void main(String[] args) {
