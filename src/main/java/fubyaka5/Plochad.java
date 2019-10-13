@@ -6,6 +6,6 @@ import java.util.HashMap;
 
 public class Plochad {
     static int designerPdfViewer(int[] h, String word) {
-
+        return 0;
     }
 }
