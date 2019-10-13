@@ -12,11 +12,9 @@ public class UserService {
     public boolean addUsers(User user) {
         if(!(users.containsKey(user.getLogin()))) {
             users.put(user.getLogin(), user);
-            System.out.println("Успешно");
             return true;
         }
         else {
-            System.out.println("Безуспешно, юзер с таким логином есть.");
             return false;
         }
     }
@@ -26,11 +24,9 @@ public class UserService {
     public boolean deleteByLogin(String login){
         if(users.containsKey(login)) {
             users.remove(login);
-            System.out.println("Успешно удалён.");
             return true;
         }
             else {
-            System.out.println("Безуспешно. Такого логина не существует.");
             return false;
         }
     }
@@ -44,13 +40,24 @@ public class UserService {
     public boolean editUser(User user) {
             if(users.containsKey(user.getLogin())) {
                 users.put(user.getLogin(), user);
-                System.out.println("Успешно");
                 return true;
             }
             else {
-                System.out.println("Безуспешно. Нет такого логина.");
                 return false;
             }
+    }
+    public boolean auth(String login, String password) {
+        if(users.containsKey(login)) {
+            if(users.get(login).getPassword().equals(password)) {
+                return true;
+            }
+            else {
+                return false;
+            }
+        }
+        else {
+            return false;
+        }
     }
 
 }
