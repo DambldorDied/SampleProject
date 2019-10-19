@@ -15,6 +15,7 @@ public class App {
             System.out.println("4. Показать список пользователей");
             System.out.println("5. Показать пользователя по логину");
             System.out.println("0. Выйти");
+            key = sc.nextInt();
             switch (key) {
                 case 0:
                 {
@@ -60,13 +61,11 @@ public class App {
                     break;
                 }
                 case 5:
-                {
                     System.out.print("Логин: ");
                     String login = sc.next();
                     User user = serv.getByLogin(login);
                     System.out.println("Логин: " + user.getLogin() + "Пароль: " + user.getPassword() + "Имя: " + user.getName());
                     break;
-                }
             }
         }
     }
