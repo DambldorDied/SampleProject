@@ -17,31 +17,28 @@ public class App {
             System.out.println("0. Выйти");
             key = sc.nextInt();
             switch (key) {
-                case 0:
-                {
+                case 0: {
+                    serv.savToData();
                     System.exit(0);
                 }
-                case 1:
-                {
+                case 1: {
                     System.out.print("Логин: ");
                     String login = sc.next();
                     System.out.print("Пароль: ");
                     String password = sc.next();
                     System.out.print("Имя: ");
-                    String name = sc.nextLine();
+                    String name = sc.next();
                     User user = new User(login, password, name);
                     serv.addUsers(user);
                     break;
                 }
-                case 2:
-                {
+                case 2: {
                     System.out.print("Введите логин: ");
                     String login = sc.next();
                     serv.deleteByLogin(login);
                     break;
                 }
-                case 3:
-                {
+                case 3: {
                     System.out.print("Логин: ");
                     String login = sc.next();
                     System.out.print("Пароль: ");
@@ -52,21 +49,18 @@ public class App {
                     serv.editUser(user);
                     break;
                 }
-                case 4:
-                {
-                    List<User> users = serv.getAllUsers();
-                    for (int i = 0; i < users.size(); i++) {
-                        System.out.println("Логин: " + users.get(i).getLogin() + "Пароль: " + users.get(i).getPassword() + "Имя: " + users.get(i).getName());
-                    }
+                case 4: {
+                    serv.getAllUsers();
                     break;
                 }
-                case 5:
+                case 5: {
                     System.out.print("Логин: ");
                     String login = sc.next();
-                    User user = serv.getByLogin(login);
-                    System.out.println("Логин: " + user.getLogin() + "Пароль: " + user.getPassword() + "Имя: " + user.getName());
+                    serv.getByLogin(login);
                     break;
+                }
             }
         }
     }
+
 }
