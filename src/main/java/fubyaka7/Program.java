@@ -22,7 +22,7 @@ public class Program {
             }
             int mid = sum / count;
             System.out.println(sum + " " + count);
-            //       int c = 0;
+            //    int c = 0;
          //       while (c != -1) {
          //           c = reader.read();
          //           System.out.print((char) c);
